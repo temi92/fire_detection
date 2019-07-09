@@ -21,7 +21,7 @@ while (cap.isOpened()):
 		_, contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
 
-		contours = sorted(contours, key = cv2.contourArea, reverse = True)[:2] # get largest contour
+		contours = sorted(contours, key = cv2.contourArea, reverse = True)[:2] # get two largest contour
 
 		for i in range(0,2):
 			x,y,w,h = cv2.boundingRect(contours[i])
